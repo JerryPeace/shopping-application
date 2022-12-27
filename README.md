@@ -1,27 +1,13 @@
 
-# Shopping APP
+# Shopping Application
 
 ### Overview
 
-- Shopping-app client side is built on top of React-scripts.js.
-- Shopping-app server side is built on top of Node.js.
+- Shopping-application client side is built on top of React-scripts.js.
 
 *  Requires Node version (v16.14.2)
 *  Requires Yarn version (v1.22.0 or greater).
 
-
-### Run app service in local
-
-  #### Run app server by docker compose
-  Pull whole app from github and access root directory of app
-  you can open `docker-compose.yml` file to check relevant docker configuration
-
-  ```
-  docker-compose up
-  open http://localhost:3000/#/shopping
-
-  docker-compose stop
-  ```
 
 ### Development by local
 pull whole app from github and access root directory of app
@@ -31,6 +17,14 @@ pull whole app from github and access root directory of app
   ```
   yarn
   yarn start
+  open http://localhost:3000/#/shopping
+  ```
+
+  #### Build and run Docker image
+
+  ```
+  docker build -t shoppingapp .
+  docker run --rm -it shoppingapp:latest
   open http://localhost:3000/#/shopping
   ```
 
