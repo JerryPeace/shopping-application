@@ -73,5 +73,5 @@
     "not op_mini all"
   ],
   "proxy": "http://127.0.0.1:3000",
-  "homepage": "https://jerrypeace.github.io/shopping-app"
+  "homepage": "https://jerrypeace.github.io/shopping-application"
 }
