@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shopping-app/static/css/main.eb5d513a.css",
+    "main.js": "/shopping-app/static/js/main.a50bb46b.js",
+    "static/media/switch.png": "/shopping-app/static/media/switch.31e962d00373e0be69ad.png",
+    "static/media/cart.svg": "/shopping-app/static/media/cart.dbab0f6733b9ac9e38f9bf9606204f17.svg",
+    "index.html": "/shopping-app/index.html",
+    "main.eb5d513a.css.map": "/shopping-app/static/css/main.eb5d513a.css.map",
+    "main.a50bb46b.js.map": "/shopping-app/static/js/main.a50bb46b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb5d513a.css",
+    "static/js/main.a50bb46b.js"
+  ]
+}
