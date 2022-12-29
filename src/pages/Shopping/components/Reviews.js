@@ -8,7 +8,6 @@ const Reviews = ({ collapse = '' }) => {
   const { reviewsData } = useRating();
   const preReviews = reviewsData.slice(0, 3);
   const [reviews, setReviews] = useState(preReviews);
-  console.log(reviews);
   return (
     <ReviewsBox collapse={collapse}>
       {reviews.map((info, index) => (
