@@ -7,11 +7,11 @@ import { media } from '../constants';
 
 const ProductInfo = () => {
   const { setCart, productCounts, setCounts } = useShopCart();
-  const { currentRating, totalCount, setRating } = useRating();
+  const { averageRating, totalCount } = useRating();
   return (
     <ProductInfoBox>
       <h2>Nintendo Switch™ with Neon Blue and Neon Red Joy-Con™</h2>
-      <StarRating rating={currentRating} setRating={setRating} totalCount={totalCount} />
+      <StarRating rating={averageRating} totalCount={totalCount} />
       <h3>$ 300</h3>
       <Selector setCounts={setCounts} productCounts={productCounts} />
       <CartButton collapse="xs" onClick={() => setCart(true)} data-testid="add-cart-button">

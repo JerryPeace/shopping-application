@@ -1,13 +1,13 @@
 import styled from '@emotion/styled';
-import useReviews from 'hooks/useReviews';
+import { useRating } from 'provider/RatingProvider';
 import CommentRenderer from './CommentRenderer';
 import { media } from '../constants';
 
 const Reviews = ({ collapse = '' }) => {
-  const [data] = useReviews();
+  const { reviewsData } = useRating();
   return (
     <ReviewsBox collapse={collapse}>
-      {data.map((info, index) => (
+      {reviewsData.map((info, index) => (
         <CommentRenderer key={index} {...info} />
       ))}
       <div>

@@ -3,14 +3,14 @@ import StarRating, { ProgressRating } from 'components/StarRating';
 import { useRating } from 'provider/RatingProvider';
 
 const Rating = () => {
-  const { currentRating, totalCount, ratingData, setRating } = useRating();
+  const { averageRating, totalCount, ratingData, setRating } = useRating();
   return (
     <RatingBox>
       <div>
         <div>
           <strong>Reviews</strong>
         </div>
-        <StarRating rating={currentRating} setRating={setRating} totalCount={totalCount} />
+        <StarRating rating={averageRating} setRating={setRating} totalCount={totalCount} />
       </div>
       <div>
         <ol>

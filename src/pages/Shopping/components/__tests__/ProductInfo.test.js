@@ -20,7 +20,7 @@ describe('ProductInfo', () => {
       setCart: mockCallBack,
     });
     useRating.mockReturnValueOnce({
-      currentRating: 3,
+      averageRating: 3,
       totalCount: 100,
       setRating: jest.fn(),
     });
