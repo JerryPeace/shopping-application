@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import styled from '@emotion/styled';
 import { useRating } from 'provider/RatingProvider';
 import CommentRenderer from './CommentRenderer';
@@ -5,14 +6,26 @@ import { media } from '../constants';
 
 const Reviews = ({ collapse = '' }) => {
   const { reviewsData } = useRating();
+  const preReviews = reviewsData.slice(0, 3);
+  const [reviews, setReviews] = useState(preReviews);
+  console.log(reviews);
   return (
     <ReviewsBox collapse={collapse}>
-      {reviewsData.map((info, index) => (
+      {reviews.map((info, index) => (
         <CommentRenderer key={index} {...info} />
       ))}
-      <div>
-        <DetailButton collapse="xs">Load more</DetailButton>
-      </div>
+      {reviews.length < 4 && (
+        <div>
+          <DetailButton
+            onClick={() => {
+              setReviews(reviewsData);
+            }}
+            collapse="xs"
+          >
+            Load more
+          </DetailButton>
+        </div>
+      )}
     </ReviewsBox>
   );
 };
@@ -38,9 +51,4 @@ const DetailButton = styled.button`
   background: #eee;
   text-align: center;
   margin: 0 auto;
-  ${(props) =>
-    props.collapse &&
-    media[props.collapse](`
-    display: none;
-  `)}
 `;
