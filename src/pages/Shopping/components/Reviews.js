@@ -6,18 +6,19 @@ import { media } from '../constants';
 
 const Reviews = ({ collapse = '' }) => {
   const { reviewsData } = useRating();
-  const preReviews = reviewsData.slice(0, 3);
-  const [reviews, setReviews] = useState(preReviews);
+  const [displayCounts, setCounts] = useState(3);
+  const [review, setReview] = useState(reviewsData.slice(0, displayCounts));
   return (
     <ReviewsBox collapse={collapse}>
-      {reviews.map((info, index) => (
+      {review.map((info, index) => (
         <CommentRenderer key={index} {...info} />
       ))}
-      {reviews.length < 4 && (
+      {review.length < reviewsData.length && (
         <div>
           <DetailButton
             onClick={() => {
-              setReviews(reviewsData);
+              setReview(reviewsData.slice(0, displayCounts + 11));
+              setCounts(displayCounts + 10);
             }}
             collapse="xs"
           >
@@ -50,4 +51,8 @@ const DetailButton = styled.button`
   background: #eee;
   text-align: center;
   margin: 0 auto;
+  &:hover {
+    background: #aaa;
+    color: white;
+  }
 `;
