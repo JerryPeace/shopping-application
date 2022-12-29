@@ -1,11 +1,10 @@
 import { cleanup, render, fireEvent, screen } from '@testing-library/react';
-import { jest } from '@jest/globals';
-import { useRating } from 'provider/RatingProvider';
-import { useShopCart } from 'provider/ShopCartProvider';
+import { useRating } from 'providers/RatingProvider';
+import { useShopCart } from 'providers/ShopCartProvider';
 import ProductInfo from '../ProductInfo';
 
-jest.mock('provider/ShopCartProvider');
-jest.mock('provider/RatingProvider');
+jest.mock('providers/ShopCartProvider');
+jest.mock('providers/RatingProvider');
 
 describe('ProductInfo', () => {
   let mockCallBack = jest.fn();

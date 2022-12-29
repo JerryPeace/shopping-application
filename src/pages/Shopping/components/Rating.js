@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import StarRating, { ProgressRating } from 'components/StarRating';
-import { useRating } from 'provider/RatingProvider';
+import { useRating } from 'providers/RatingProvider';
 
 const Rating = () => {
   const { averageRating, totalCount, ratingData, setRating } = useRating();

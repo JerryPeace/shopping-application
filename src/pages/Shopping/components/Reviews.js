@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from '@emotion/styled';
-import { useRating } from 'provider/RatingProvider';
+import { useRating } from 'providers/RatingProvider';
 import CommentRenderer from './CommentRenderer';
 import { media } from '../constants';
 

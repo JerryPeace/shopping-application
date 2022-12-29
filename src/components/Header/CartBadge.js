@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import switchPlay from 'assets/switch.png';
 import cartIcon from 'assets/cart.svg';
 import { useDetectOutsideClick } from 'hooks/useDetectOutsideClick';
-import { useShopCart } from 'provider/ShopCartProvider';
+import { useShopCart } from 'providers/ShopCartProvider';
 
 const CartBadge = () => {
   const dropdownRef = useRef(null);

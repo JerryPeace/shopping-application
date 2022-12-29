@@ -1,8 +1,8 @@
 import { cleanup, render, screen, fireEvent } from '@testing-library/react';
 import CartBadge from './CartBadge';
-import { useShopCart } from 'provider/ShopCartProvider';
+import { useShopCart } from 'providers/ShopCartProvider';
 
-jest.mock('provider/ShopCartProvider', () => ({
+jest.mock('providers/ShopCartProvider', () => ({
   useShopCart: jest.fn(),
 }));
 

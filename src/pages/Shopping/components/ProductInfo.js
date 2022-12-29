@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import StarRating from 'components/StarRating';
 import Selector from 'pages/Shopping/components/Selector';
-import { useRating } from 'provider/RatingProvider';
-import { useShopCart } from 'provider/ShopCartProvider';
+import { useRating } from 'providers/RatingProvider';
+import { useShopCart } from 'providers/ShopCartProvider';
 import { media } from '../constants';
 
 const ProductInfo = () => {

@@ -1,5 +1,5 @@
-import RatingProvider from 'provider/RatingProvider';
-import ShopCartProvider from 'provider/ShopCartProvider';
+import RatingProvider from 'providers/RatingProvider';
+import ShopCartProvider from 'providers/ShopCartProvider';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import Shopping from './pages/Shopping';
 
