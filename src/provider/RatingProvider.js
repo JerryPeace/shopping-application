@@ -22,7 +22,7 @@ const RatingProvider = ({ children }) => {
   for (let i = 0; i < ratingData.length; i++) {
     totalRating += ratingData[i] * (i + 1);
   }
-  const averageRating = Math.floor(totalRating / totalCount);
+  const averageRating = Math.round(totalRating / totalCount);
 
   const value = useMemo(
     () => ({
